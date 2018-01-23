@@ -1,0 +1,6 @@
+ALTER TABLE `countries` ADD INDEX(`id`);
+ALTER TABLE `countries` CHANGE `id` `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `states` ADD INDEX(`id`);
+ALTER TABLE `states` ADD INDEX(`country_id`);
+ALTER TABLE `states` CHANGE `id` `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT, CHANGE `country_id` `country_id` INT(11) UNSIGNED NOT NULL DEFAULT '1';
